@@ -14,6 +14,7 @@ class GalleryCardsSlider {
     this.cards = document.querySelectorAll('.card');
     this.cards.forEach((card, index) => {
       if(this.activeCardIndex === index) card.classList.add('card_active');
+
       card.dataset.index = index;
       // Add transition to each card.
       // Wrap it in setTimeout to remove transition
@@ -21,18 +22,25 @@ class GalleryCardsSlider {
       setTimeout(() => {
         this.#addTransition(card)
       }, 0)
-
+      // set tabindex for accessibility from keyboard
+      card.setAttribute("tabindex", "0");
     })
   }
 
+  #initChanging(e) {
+    if(!e.target.classList.contains('card_active') && e.target.classList.contains('card')) {
+      const index = Number(e.target.dataset.index);
+      this.#changeActiveCard(index)
+    }
+  }
+
+
+
   #addListener() {
     const container = document.querySelector('#container');
-    container.addEventListener('click', (e) => {
-      if(!e.target.classList.contains('card_active') && e.target.classList.contains('card')) {
-        const index = Number(e.target.dataset.index);
-        this.#changeActiveCard(index)
-      }
-    })
+    container.addEventListener('click', this.#initChanging.bind(this));
+    // use focusin because we need bubbling
+    container.addEventListener('focusin', this.#initChanging.bind(this));
   }
 
   #changeActiveCard(newIndex) {
