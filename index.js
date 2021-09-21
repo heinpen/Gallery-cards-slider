@@ -1,4 +1,4 @@
-class GalleryCards {
+class GalleryCardsSlider {
   constructor(config) {
     this.activeCardIndex = config.activeCardIndex ?? 0;
     this.transition = config.transition ?? "flex 500ms ease-in-out";
@@ -49,7 +49,10 @@ class GalleryCards {
   }
 }
 
-new GalleryCards({
-  activeCardIndex: 0
-})
+const config = {
+  activeCardIndex: 0,
+  transition: "flex 500ms ease-in-out"
+}
+
+new GalleryCardsSlider(config)
 
