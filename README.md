@@ -1,1 +1,1 @@
-# Gallary-cards
+# Gallery-cards
