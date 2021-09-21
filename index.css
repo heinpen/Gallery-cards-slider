@@ -19,6 +19,7 @@ body {
     margin: 5px;
     flex: 1;
     cursor: pointer;
+    outline: none;
 }
 
 .card_1 {
