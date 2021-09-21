@@ -17,8 +17,8 @@ Simple, responsive, slider for cards using vanilla js.
 ```
 2. Change [index.css](./index.css) file for your needs.
 3. In js file, there is a config object where you can set your different values such as:
-  ` activeCardIndex` - it's index of initially active card(expected value: number).
-  ` transition` - it's transition that will be assigned to each card(expected value: string). Example: ` "flex 500ms ease-in-out" `.
+ - ` activeCardIndex` - it's index of initially active card(expected value: number).
+ - ` transition` - it's transition that will be assigned to each card(expected value: string). Example: ` "flex 500ms ease-in-out" `.
   
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
