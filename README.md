@@ -19,6 +19,7 @@ Simple, responsive, slider for cards using vanilla js.
 3. In js file, there is a config object where you can set your different values such as:
  - ` activeCardIndex` - it's index of initially active card(expected value: number).
  - ` transition` - it's transition that will be assigned to each card(expected value: string). Example: ` "flex 500ms ease-in-out" `.
-  
+
+Demo: https://salihub.github.io/Gallery-cards-slider/index.html
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
